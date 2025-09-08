@@ -1,0 +1,21 @@
+# Произвольный список
+lst = [1, 2, 3, 4, 5]   # произвольный список
+print("Исходный:", lst)
+reversed_lst = lst[::-1]
+print("Обратный:", reversed_lst)
+
+# Функция list_sort(lst) — сортировка по убыванию абсолютного значения
+def list_sort(lst):
+    return sorted(lst, key=abs, reverse=True)
+numbers = [3, -7, 1, -10, 5]
+print("Исходный:", numbers)
+print("Отсортированный:", list_sort(numbers))
+
+# Функция change(lst) — поменять местами первый и последний элемент
+def change(lst):
+    if len(lst) >= 2:     # условие задачи
+        lst[0], lst[-1] = lst[-1], lst[0]
+    return lst
+nums = [10, 20, 30, 40]
+print("Исходный:", nums)
+print("После обмена:", change(nums))
